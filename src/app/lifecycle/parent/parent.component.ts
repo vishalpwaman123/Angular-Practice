@@ -10,4 +10,11 @@ export class ParentComponent {
   constructor() {
     console.log('Parent Constructor Calling.....');
   }
+
+  handleSubmit(event: HTMLInputElement) {
+    console.log(event.value);
+    console.log(event.type);
+    console.log(event.name);
+    console.log(event.placeholder);
+  }
 }

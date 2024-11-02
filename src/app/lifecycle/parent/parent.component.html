@@ -1,4 +1,4 @@
 <div class="p-5">
-  <input type="text" [(ngModel)]="name"/>
-  <div>Name : {{name}}</div>
+  <input type="text" #name name="firstName" placeholder="First Name" />
+  <button class="btn btn-primary" (click)="handleSubmit(name)">Submit</button>
 </div>
