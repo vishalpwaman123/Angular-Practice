@@ -1,4 +1,15 @@
 <div class="p-5">
+  <div class="mb-3">
+    Text input : {{ _name | uppercase }} {{ _name | lowercase }}
+    {{ _name | titlecase }}
+  </div>
+  <div class="mb-3">Date : {{ _date | date : "dd-MM-yyyy" }}</div>
+  <div class="mb-3">{{ 1234.56 | currency }}</div>
+  <div class="mb-3">{{ 1234.56 | currency : "USD" : 'symbol':'1.0-0' }}</div>
+  <div class="mb-3">{{ 1234.56 | currency : "EUR" }}</div>
+  <div class="mb-3">{{ 1234.56 | number }}</div>
+  <div class="mb-3">{{ 1234.56 | percent }}</div>
+  <div class="mb-3">{{ user | json }}</div>
   <input type="text" #name name="firstName" placeholder="First Name" />
   <button class="btn btn-primary" (click)="handleSubmit(name)">Submit</button>
 </div>
